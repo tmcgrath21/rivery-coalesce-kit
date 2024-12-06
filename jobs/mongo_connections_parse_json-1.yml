@@ -1,0 +1,6 @@
+excludeSelector: ""
+fileVersion: 1
+id: "1"
+includeSelector: "{ location: WORK name: STG_MONGO_CONNECTIONS }"
+name: mongo_connections_parse_json
+type: Job

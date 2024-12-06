@@ -1,0 +1,321 @@
+fileVersion: 1
+id: 4c1b9533-d6b0-4bcf-9ef1-00d25eb7cd9e
+name: STG_MONGO_CONNECTIONS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: Created by Rivery in 2024-11-19T10:25:59.850518
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7408bd48-976d-4e7c-9af9-5e4b3c63c8a3
+          stepCounter: 4c1b9533-d6b0-4bcf-9ef1-00d25eb7cd9e
+        config: {}
+        dataType: VARIANT
+        description: ""
+        name: JSON_DATA
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2cb4bb7-2b5f-4b15-a038-3329be3098c9
+                stepCounter: 0633a789-d05c-4df1-bfed-7da14cb95b11
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 88c5172d-8765-4660-b8be-6f8dc2e7ef6d
+          stepCounter: 4c1b9533-d6b0-4bcf-9ef1-00d25eb7cd9e
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: _ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2a039f3b-baf4-4243-a8a0-19f414c75bfd
+                stepCounter: 0633a789-d05c-4df1-bfed-7da14cb95b11
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bdeccc1e-9a6d-4f93-902b-5919e0cb1b49
+          stepCounter: 4c1b9533-d6b0-4bcf-9ef1-00d25eb7cd9e
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: CONNECTION_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 058e883e-863e-412f-818a-ee0075e4bbaf
+                stepCounter: 0633a789-d05c-4df1-bfed-7da14cb95b11
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 14289829-d03f-4fe4-aae5-d3c8215c157c
+          stepCounter: 4c1b9533-d6b0-4bcf-9ef1-00d25eb7cd9e
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2cb4bb7-2b5f-4b15-a038-3329be3098c9
+                stepCounter: 0633a789-d05c-4df1-bfed-7da14cb95b11
+            transform: "\"MONGO_CONNECTIONS\".\"JSON_DATA\":\"account\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 286b9a34-825c-4f6a-b857-a5052fa5d551
+          stepCounter: 4c1b9533-d6b0-4bcf-9ef1-00d25eb7cd9e
+        config: {}
+        dataType: STRING
+        description: ""
+        name: connection_creation_time
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2cb4bb7-2b5f-4b15-a038-3329be3098c9
+                stepCounter: 0633a789-d05c-4df1-bfed-7da14cb95b11
+            transform: "\"MONGO_CONNECTIONS\".\"JSON_DATA\":\"connection_creation_time\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5438e0dc-6168-4929-9db3-8394152d97e5
+          stepCounter: 4c1b9533-d6b0-4bcf-9ef1-00d25eb7cd9e
+        config: {}
+        dataType: STRING
+        description: ""
+        name: connection_details_key
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2cb4bb7-2b5f-4b15-a038-3329be3098c9
+                stepCounter: 0633a789-d05c-4df1-bfed-7da14cb95b11
+            transform: "\"JSON_DATA_connection_details\".value:\"key\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9edce332-25ff-4ed1-be7d-ee53a1e828d0
+          stepCounter: 4c1b9533-d6b0-4bcf-9ef1-00d25eb7cd9e
+        config: {}
+        dataType: STRING
+        description: ""
+        name: connection_details_value
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2cb4bb7-2b5f-4b15-a038-3329be3098c9
+                stepCounter: 0633a789-d05c-4df1-bfed-7da14cb95b11
+            transform: "\"JSON_DATA_connection_details\".value:\"value\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9ab5b960-3ba4-4863-87d3-082970c90e99
+          stepCounter: 4c1b9533-d6b0-4bcf-9ef1-00d25eb7cd9e
+        config: {}
+        dataType: STRING
+        description: ""
+        name: connection_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2cb4bb7-2b5f-4b15-a038-3329be3098c9
+                stepCounter: 0633a789-d05c-4df1-bfed-7da14cb95b11
+            transform: "\"MONGO_CONNECTIONS\".\"JSON_DATA\":\"connection_name\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 74504037-0fd9-45e2-8954-e6b74535865e
+          stepCounter: 4c1b9533-d6b0-4bcf-9ef1-00d25eb7cd9e
+        config: {}
+        dataType: STRING
+        description: ""
+        name: connection_type
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2cb4bb7-2b5f-4b15-a038-3329be3098c9
+                stepCounter: 0633a789-d05c-4df1-bfed-7da14cb95b11
+            transform: "\"MONGO_CONNECTIONS\".\"JSON_DATA\":\"connection_type\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fb136eff-08e0-4a71-a8b9-5f5bc4091cc6
+          stepCounter: 4c1b9533-d6b0-4bcf-9ef1-00d25eb7cd9e
+        config: {}
+        dataType: STRING
+        description: ""
+        name: connection_type_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2cb4bb7-2b5f-4b15-a038-3329be3098c9
+                stepCounter: 0633a789-d05c-4df1-bfed-7da14cb95b11
+            transform: "\"MONGO_CONNECTIONS\".\"JSON_DATA\":\"connection_type_name\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0821c370-3d4d-4cd4-bba5-e9f3cfbd3b29
+          stepCounter: 4c1b9533-d6b0-4bcf-9ef1-00d25eb7cd9e
+        config: {}
+        dataType: STRING
+        description: ""
+        name: connection_update_by
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2cb4bb7-2b5f-4b15-a038-3329be3098c9
+                stepCounter: 0633a789-d05c-4df1-bfed-7da14cb95b11
+            transform: "\"MONGO_CONNECTIONS\".\"JSON_DATA\":\"connection_update_by\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9a5fa4eb-e86c-4914-855b-8430eb7f5339
+          stepCounter: 4c1b9533-d6b0-4bcf-9ef1-00d25eb7cd9e
+        config: {}
+        dataType: STRING
+        description: ""
+        name: connection_update_time
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2cb4bb7-2b5f-4b15-a038-3329be3098c9
+                stepCounter: 0633a789-d05c-4df1-bfed-7da14cb95b11
+            transform: "\"MONGO_CONNECTIONS\".\"JSON_DATA\":\"connection_update_time\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: db3de9e0-ae69-47a9-9afa-d668e3375c7f
+          stepCounter: 4c1b9533-d6b0-4bcf-9ef1-00d25eb7cd9e
+        config: {}
+        dataType: STRING
+        description: ""
+        name: cross_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2cb4bb7-2b5f-4b15-a038-3329be3098c9
+                stepCounter: 0633a789-d05c-4df1-bfed-7da14cb95b11
+            transform: "\"MONGO_CONNECTIONS\".\"JSON_DATA\":\"cross_id\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 21c20f5d-a781-4a39-9b3a-f15415805b14
+          stepCounter: 4c1b9533-d6b0-4bcf-9ef1-00d25eb7cd9e
+        config: {}
+        dataType: STRING
+        description: ""
+        name: ds_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2cb4bb7-2b5f-4b15-a038-3329be3098c9
+                stepCounter: 0633a789-d05c-4df1-bfed-7da14cb95b11
+            transform: "\"MONGO_CONNECTIONS\".\"JSON_DATA\":\"ds_name\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a5fdfcaa-e288-417c-956a-ff0ace69bc68
+          stepCounter: 4c1b9533-d6b0-4bcf-9ef1-00d25eb7cd9e
+        config: {}
+        dataType: STRING
+        description: ""
+        name: env_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2cb4bb7-2b5f-4b15-a038-3329be3098c9
+                stepCounter: 0633a789-d05c-4df1-bfed-7da14cb95b11
+            transform: "\"MONGO_CONNECTIONS\".\"JSON_DATA\":\"env_id\"::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 42443f13-819b-4af0-81b5-49a29c21debe
+          stepCounter: 4c1b9533-d6b0-4bcf-9ef1-00d25eb7cd9e
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: is_test_connection
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2cb4bb7-2b5f-4b15-a038-3329be3098c9
+                stepCounter: 0633a789-d05c-4df1-bfed-7da14cb95b11
+            transform: "\"MONGO_CONNECTIONS\".\"JSON_DATA\":\"is_test_connection\"::BOOLEAN"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 60c2e8af-12ee-4a12-97af-55b206f062ff
+          stepCounter: 4c1b9533-d6b0-4bcf-9ef1-00d25eb7cd9e
+        config: {}
+        dataType: STRING
+        description: ""
+        name: _id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2cb4bb7-2b5f-4b15-a038-3329be3098c9
+                stepCounter: 0633a789-d05c-4df1-bfed-7da14cb95b11
+            transform: "\"MONGO_CONNECTIONS\".\"JSON_DATA\":\"_id\"::STRING"
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: MONGO_CONNECTIONS
+        join:
+          joinCondition: |-
+            FROM {{ ref('WORK', 'MONGO_CONNECTIONS') }} "MONGO_CONNECTIONS", 
+            lateral flatten(input => "JSON_DATA":"connection_details", OUTER => TRUE) "JSON_DATA_connection_details"
+        name: STG_MONGO_CONNECTIONS
+        noLinkRefs: []
+  name: STG_MONGO_CONNECTIONS
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
