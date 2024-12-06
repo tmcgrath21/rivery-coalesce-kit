@@ -2,8 +2,8 @@ fileVersion: 1
 id: "3"
 mappingDefinitions:
   RIVERY-STORAGE:
-    database: ""
-    schema: ""
+    database: SOLUTIONS
+    schema: TESTING
   SAMPLE:
     database: SNOWFLAKE_SAMPLE_DATA
     schema: TPCH_SF1
